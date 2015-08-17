@@ -4,7 +4,7 @@ This template will deploy a new VM (along with a new VNet, Storage Account and L
 
 Click the button below to deploy
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Factive-directory-new-domain%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdigcloudio%2Farm%2Fmaster%2Factive-directory-new-domain%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -35,6 +35,6 @@ Below are the parameters that the template expects
 | domainName | The FQDN of the AD Domain created |
 | addnsName | The DNS prefix for the public IP address used by the Load Balancer |
 | RDPPort | The public RDP port for the VM |
-| AssetLocation | The location of resources such as templates and DSC modules that the script is dependent <br> <ul><li> **https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/active-directory-new-domain (default)**</li></ul> |
+| AssetLocation | The location of resources such as templates and DSC modules that the script is dependent <br>
 
 
