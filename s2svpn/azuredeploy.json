@@ -96,7 +96,7 @@
         },
         "gatewaySubnetPrefix": {
             "type": "string",
-            "defaultValue": "10.3.200.0/29",
+            "defaultValue": "10.3.200.0/28",
             "metadata": {
                 "description": "CIDR block for gateway subnet, subsset of azureVNetAddressPrefix address space"
             }
