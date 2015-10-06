@@ -1,6 +1,6 @@
 # Site to Site VPN Connection
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F201-site-to-site-vpn%2Fazuredeploy.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdigcloudio%2Farm%2Fmaster%2Fsite-to-site-vpn%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -9,3 +9,5 @@ This template will create a Virtual Network, a subnet for the network, a Virtual
 Please note that you must have a Public IP for your other network's VPN gateway and cannot be behind an NAT.
 
 Although only the parameters in [azuredeploy-parameters.json](./azure-deploy-parameters.json) are necessary, you can override the defaults of any of the template parameters below:
+https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-site-to-site-vpn/azuredeploy.json
+https://raw.githubusercontent.com/digcloudio/arm/master/site-to-site-vpn/azuredeploy.json

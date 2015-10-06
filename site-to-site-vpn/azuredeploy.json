@@ -131,9 +131,11 @@
         
     },
     "variables": {
+        // "lowerCaseDNSName": "[toLower(parameters('dnsNameForPublicIP'))]",  
         "vnetID": "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
         "gatewaySubnetRef": "[concat(variables('vnetID'),'/subnets/','GatewaySubnet')]",
-        "subnetRef": "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",        
+        "subnetRef": "[concat(variables('vnetID'),'/subnets/',parameters('subnetName'))]",
+        // "networkSecurityGroupName": "[concat(variables('lowerCaseDNSName'), 'nsg')]",
         "api-version": "2015-06-15"
     },
     "resources": [
@@ -220,6 +222,44 @@
                 "publicIPAllocationMethod": "Dynamic"
             }
         },
+    //    {
+    //  "apiVersion": "2015-05-01-preview",
+    //  "type": "Microsoft.Network/networkSecurityGroups",
+    //  "name": "[variables('networkSecurityGroupName')]",
+    //  "location": "[variables('location')]",
+    //  "properties": {
+    //    "securityRules": [
+    //      {
+    //        "name": "ssh",
+    //        "properties": {
+    //          "description": "SSH port",
+    //          "protocol": "Tcp",
+    //          "sourcePortRange": "*",
+    //          "destinationPortRange": "22",
+    //          "sourceAddressPrefix": "Internet",
+    //          "destinationAddressPrefix": "*",
+    //          "access": "Allow",
+    //          "priority": 100,
+    //          "direction": "Inbound"
+    //        }
+    //      },
+    //     {
+    //        "name": "minecraft",
+    //        "properties": {
+    //          "description": "Minecraft server port",
+    //          "protocol": "Tcp",
+    //          "sourcePortRange": "*",
+    //          "destinationPortRange": "25565",
+    //          "sourceAddressPrefix": "Internet",
+    //          "destinationAddressPrefix": "*",
+    //          "access": "Allow",
+    //          "priority": 101,
+    //          "direction": "Inbound"
+    //        }
+    //      }
+    //    ]
+    //  }
+    //},
         {
             "apiVersion": "[variables('api-version')]",
             "type": "Microsoft.Network/virtualNetworkGateways",
@@ -233,7 +273,7 @@
                 "ipConfigurations": [
                     {
                         "properties": {
-                            "privateIPAllocationMethod": "Static",
+                            "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
                                 "id": "[variables('gatewaySubnetRef')]"
                             },
