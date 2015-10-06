@@ -25,7 +25,7 @@
             "metadata": {
                 "description": "Route based or policy based"
             },
-            "defaultValue": "RouteBased",
+            "defaultValue": "PolicyBased",
             "allowedValues": [
                 "RouteBased",
                 "PolicyBased"
